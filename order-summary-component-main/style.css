@@ -1,0 +1,135 @@
+:root {
+  --dark-blue: hsl(223, 47%, 23%);
+  --pale-blue:  hsl(225, 100%, 94%); 
+  --very-pale-blue:   hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --bright-blue:  hsl(245, 75%, 52%); 
+  --btn-hover: rgb(118, 112, 238);
+  --text-color: rgb(126, 127, 143);
+}
+
+button {
+  border-style: none;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;  
+  background-image: url('images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  letter-spacing: 1.2px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+}
+
+.main-component {
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 50%;
+  max-width: 450px;
+  min-width: 250px;
+  overflow: hidden;  
+  border-radius: 30px;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 5px 10px 25px rgb(141, 141, 141);
+}
+
+/* >= 785px  */
+@media(min-width: 785px) { 
+  .annual-plan {
+    background-color: var(--very-pale-blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    width: 90%;
+  }
+
+  .annual-plan > p {
+    text-align: left;
+  }
+}
+
+/* <= 785px  */
+@media(max-width: 785px) {
+  .annual-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .annual-plan > p {
+    text-align: center;
+  }
+}
+
+.annual-plan {
+  padding: 10px;
+  background-color: var(--very-pale-blue);
+  margin: 15px 20px;  
+  box-sizing: border-box;
+  border-radius: 10px;
+
+}
+
+.annual-plan > * {
+  margin: 10px 20px;
+}
+
+.annual-plan > a:hover {
+  color: var(--btn-hover);
+}
+
+.order-text {
+  padding: 10px 20px;
+}
+
+.main-component > button {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+  height: 7vh;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.main-component > button:hover {
+  cursor: pointer;
+}
+
+.proceed-btn {  
+  background-color: var(--bright-blue);
+  font-weight: inherit;
+  color: antiquewhite;
+  box-shadow: 0px 10px 20px rgb(119, 119, 119);
+}
+
+.proceed-btn:hover {
+  color: antiquewhite;
+  background-color: var(--btn-hover);
+}
+
+.cancel-btn {
+  font-weight: inherit;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.annual-plan p > span {
+  font-weight: 900;
+  color: rgb(26, 25, 25);
+}
+
+.order-component > h2 {
+  color: rgb(26, 25, 25);
+}
+
+
+.main-component > img {
+  width: 100%;
+}
